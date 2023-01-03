@@ -2,7 +2,7 @@ const jwt = require("jsonwebtoken");
 
 module.exports = (req, res, next) => {
   let token = req.headers.authorization;
-  // console.log(token);
+   console.log(token);
   if (token === undefined) {
     return res.status(403).json({
       message: "Access Denied. Invalid Validation token",

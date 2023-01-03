@@ -247,9 +247,12 @@ exports.getAllStories = async(req, res)=>{
 };
 
 
-exports.login = (req, res, next) => {
+exports.login = (req, res) => {
+
+  console.log('here', req)
   
     const { email, password } = req.body;
+    console.log(req.body)
     User.find({
       email,
     }).exec((err, user) => {
